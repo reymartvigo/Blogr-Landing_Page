@@ -1,0 +1,499 @@
+@use "variable";
+
+main {
+  margin-top: 8rem;
+  width: 100%;
+  height: 100%;
+  font-family: variable.$font1;
+  text-align: center;
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    color: variable.$Verydarkblue;
+  }
+  p {
+    line-height: 1.5rem;
+    color: variable.$Verydarkgrayishblue;
+  }
+
+  .details {
+    padding: 2rem;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .first-section {
+    @include variable.display;
+    gap: 1.5rem;
+    flex-direction: column;
+
+    .image {
+      width: 85%;
+      height: 18rem;
+      background-image: url(../images/illustration-editor-mobile.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  .second-section {
+    margin-top: 10rem;
+    @include variable.display;
+    flex-direction: column;
+
+    .details {
+      padding: 0;
+
+      .details-bg-image {
+        border-top-right-radius: 5rem;
+        padding: 15rem 2rem 5rem;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/bg-pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-size: 130%;
+        background-position: -3rem -10rem;
+
+        .second-img {
+          margin-top: -23rem;
+        }
+      }
+      h2 {
+        font-family: variable.$font2;
+        font-weight: 500;
+        font-size: 2rem;
+        color: white;
+      }
+      p {
+        letter-spacing: 0.5px;
+        color: variable.$Grayishblue;
+      }
+      border-top-right-radius: 5rem;
+      border-bottom-left-radius: 5rem;
+      background: linear-gradient(
+        to bottom,
+        variable.$Verydarkgrayblue,
+        variable.$Verydarkdesaturatedblue
+      );
+    }
+  }
+  .third-section {
+    @include variable.display;
+    flex-direction: column;
+    .image2 {
+      background-image: url("../images/illustration-laptop-mobile.svg");
+      background-repeat: no-repeat;
+      background-size: 25rem;
+      background-position: center;
+      width: 85%;
+      height: 20rem;
+    }
+  }
+}
+
+@media screen and(min-width: 768px) {
+  main {
+    margin-top: 8rem;
+    width: 100%;
+    height: 100%;
+    font-family: variable.$font1;
+    text-align: center;
+    img {
+      width: 80%;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      color: variable.$Verydarkblue;
+    }
+    p {
+      line-height: 1.5rem;
+      color: variable.$Verydarkgrayishblue;
+    }
+
+    .details {
+      padding: 2rem 5rem;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .first-section {
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+
+    .second-section {
+      width: 100%;
+      margin-top: 5rem;
+
+      .details {
+        padding: 0;
+
+        .details-bg-image {
+          @include variable.display($justify: flex-end, $align: center);
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background-image: url(../images/bg-pattern-circles.svg);
+          background-repeat: no-repeat;
+          background-size: 130%;
+          background-position: -3rem -8rem;
+          padding: 4rem 2rem;
+          .second-img {
+            img {
+              width: 20rem;
+              position: absolute;
+            }
+          }
+
+          .details-content {
+            padding-left: 20rem;
+
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+
+//
+
+@media screen and(min-width: 1024px) {
+  main {
+    margin-top: 8rem;
+    width: 100%;
+    height: 100%;
+    font-family: variable.$font1;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      color: variable.$Verydarkblue;
+    }
+    p {
+      line-height: 1.5rem;
+      color: variable.$Verydarkgrayishblue;
+    }
+
+    .details {
+      padding: 2rem 5rem;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .first-section {
+      z-index: 1;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      flex-direction: column;
+      padding: 2rem 0 2rem 3rem;
+      .details {
+        padding: 0 2rem;
+        h2,
+        p {
+          text-align: left;
+        }
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        grid-column: 1/3;
+      }
+
+      .image {
+        background-image: url(../images/illustration-editor-desktop.svg);
+        background-size: 40rem;
+        background-position: 3rem;
+        height: 100%;
+        padding: 0;
+        grid-row: 2/5;
+        grid-column: 2;
+        width: 100%;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .second-section {
+      width: 100%;
+      margin-top: 8rem;
+
+      .details {
+        text-align: left;
+        padding: 0;
+
+        .details-bg-image {
+          @include variable.display($justify: flex-end, $align: center);
+          position: relative;
+          width: 100%;
+          height: 100%;
+          background-image: url(../images/bg-pattern-circles.svg);
+          background-repeat: no-repeat;
+          background-size: 70%;
+          background-position: -10rem -23rem;
+          padding: 5rem 2rem;
+          .second-img {
+            img {
+              margin-left: 2rem;
+              width: 23rem;
+              position: absolute;
+            }
+          }
+
+          .details-content {
+            padding-left: 28rem;
+
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .third-section {
+      margin-top: 5rem;
+      z-index: 1;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      flex-direction: column;
+
+      .details {
+        margin-left: -8rem;
+        h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+        text-align: left;
+      }
+      .image2 {
+        background-image: url(../images/illustration-laptop-desktop.svg);
+        background-size: 40rem;
+        grid-column: 1;
+        grid-row: 1/3;
+        background-position: -12rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    margin-top: 8rem;
+    width: 100%;
+    height: 100%;
+    font-family: variable.$font1;
+    text-align: center;
+
+    .first-section {
+      background-image: url(../images/illustration-editor-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: 55rem 50rem;
+      background-position: 50rem 1rem;
+      padding: 5rem 0 2rem;
+      .details {
+        padding-left: 8rem;
+        h2,
+        p {
+          text-align: left;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        grid-column: 1/3;
+      }
+      p {
+        letter-spacing: 0.5px;
+        line-height: 2rem;
+        font-size: 1.1rem;
+      }
+
+      .image {
+        background-image: unset;
+        background-size: 45rem 41rem;
+        background-position: 7.5rem;
+        height: 150%;
+        grid-row: 2/4;
+      }
+    }
+
+    .second-section {
+      width: 100vw;
+      margin-top: 10rem;
+
+      .details {
+        text-align: left;
+        padding: 0;
+
+        .details-bg-image {
+          background-position: -5rem -23rem;
+          padding: 7rem 5rem;
+          .second-img {
+            img {
+              margin-top: -3rem;
+              margin-left: 5rem;
+              width: 30rem;
+            }
+          }
+
+          .details-content {
+            padding-left: 40rem;
+
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              line-height: 1.7rem;
+              font-size: 1.1rem;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+      }
+    }
+
+    .third-section {
+      background-image: url(../images/illustration-laptop-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: 55rem 45rem;
+      background-position: -17rem 5rem;
+      padding: 10rem 3rem;
+      margin-top: 5rem;
+      .details {
+        margin-left: -8rem;
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          letter-spacing: 0.5px;
+          line-height: 2rem;
+          font-size: 1.1rem;
+        }
+        text-align: left;
+      }
+      .image2 {
+        background-image: unset;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) and(max-width: 2560px) {
+  main {
+    margin-top: 5rem;
+
+    .first-section {
+      background-size: 55rem 50rem;
+      background-position: right 10rem;
+      padding: 10rem 15rem;
+      .details {
+        margin-top: 2rem;
+        padding: 0 2rem;
+        h2,
+        p {
+          text-align: left;
+        }
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        grid-column: 1/3;
+      }
+      p {
+        letter-spacing: 0.5px;
+        line-height: 2rem;
+        font-size: 1.5rem;
+      }
+
+      .image {
+        background-image: unset;
+        background-size: 45rem 41rem;
+        background-position: 7.5rem;
+        height: 150%;
+        grid-row: 2/4;
+      }
+    }
+
+    .second-section {
+      width: 100vw;
+      margin-top: 10rem;
+
+      .details {
+        text-align: left;
+        padding: 0;
+
+        .details-bg-image {
+          background-position: -5rem -23rem;
+          padding: 7rem 5rem;
+          .second-img {
+            img {
+              margin-top: -3rem;
+              margin-left: 5rem;
+              width: 30rem;
+            }
+          }
+
+          .details-content {
+            padding-left: 40rem;
+
+            h2 {
+              font-size: 2rem;
+            }
+            p {
+              line-height: 1.7rem;
+              font-size: 1.1rem;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+      }
+    }
+
+    .third-section {
+      background-size: 55rem 45rem;
+      background-position: left 5rem;
+      padding: 10rem 15rem;
+      margin-top: 8rem;
+      .details {
+        margin-left: -8rem;
+        h2 {
+          font-size: 2.5rem;
+        }
+        p {
+          letter-spacing: 0.5px;
+          line-height: 2rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

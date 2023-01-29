@@ -1,0 +1,48 @@
+// Primary  //
+
+$Lightred: hsl(356, 100%, 66%); // (CTA text)
+$Verylightred: hsl(355, 100%, 74%); // (CTA hover background)
+$Verydarkblue: hsl(208, 49%, 24%); // (headings)
+
+// Primary  //
+
+// Neutral //
+
+$White: hsl(0, 0%, 100%); // (text)
+$Grayishblue: hsl(240, 2%, 79%); //  (footer text)
+$Verydarkgrayishblue: hsl(207, 13%, 34%); //(body copy)
+$Verydarkblackblue: hsl(240, 10%, 16%); // (footer background)
+
+// Neutral //
+
+// Gradient
+
+// Background gradient - Intro/CTA mobile nav:  //
+
+$Verylightred2: hsl(13, 100%, 72%);
+$Lightred2: hsl(353, 100%, 62%);
+
+// Background gradient - body: //
+
+$Verydarkgrayblue: hsl(237, 17%, 21%);
+$Verydarkdesaturatedblue: hsl(237, 23%, 32%);
+
+// Gradient
+
+// font //
+$font1: "Overpass", sans-serif;
+$font2: "Ubuntu", sans-serif;
+
+// font //
+
+@mixin display($display: flex, $justify: center, $align: center) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin buttons {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

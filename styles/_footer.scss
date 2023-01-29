@@ -1,0 +1,119 @@
+@use "variable";
+
+footer {
+  margin-top: 3rem;
+  border-top-right-radius: 7rem;
+  font-family: variable.$font1;
+  @include variable.display;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: variable.$Verydarkblackblue;
+  padding: 5rem;
+  text-align: center;
+  img {
+    margin-bottom: 2rem;
+  }
+  h3 {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      @include variable.display;
+      flex-direction: column;
+      gap: 0.75rem;
+      li {
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        color: variable.$Grayishblue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-top: 5rem;
+    @include variable.display($justify: space-between, $align: flex-start);
+    flex-direction: row;
+
+    padding: 5rem;
+    text-align: left;
+    img {
+      margin-bottom: 2rem;
+    }
+    h3 {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      ul {
+        @include variable.display($align: flex-start);
+
+        li {
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-top: 5rem;
+    flex-direction: row;
+    padding: 7rem 15rem 5rem 10rem;
+    text-align: left;
+    img {
+      margin-bottom: 2rem;
+    }
+    h3 {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      ul {
+        @include variable.display($align: flex-start);
+
+        li {
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) and(max-width:2560px) {
+  footer {
+    @include variable.display($justify: space-around, $align: flex-start);
+    margin-top: 5rem;
+    flex-direction: row;
+    padding: 7rem 15rem 5rem 15rem;
+    text-align: left;
+    img {
+      margin-bottom: 2rem;
+    }
+    h3 {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      ul {
+        @include variable.display($align: flex-start);
+
+        li {
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

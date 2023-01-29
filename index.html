@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogr Landing Page || Frontend Mentor</title>
+    <link rel="icon" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class='header-wrapper'>
+            <div class="top">
+                <div class="logo-wrapper">
+                    <img src="./images/logo.svg" alt="blogr-logo" aria-hidden="true">
+
+                    <nav class="desktop-nav">
+                        <div class="desktop-wrapper">
+                            <div class="desk-nav-name">
+                                <h3 id="desk-name">Product</h3>
+                                <h3 id="desk-name2">Product</h3>
+                                <ion-icon id="desk-down" name="chevron-down-outline"></ion-icon>
+                                <ion-icon id="desk-up" name="chevron-up-outline"></ion-icon>
+                            </div>
+                            <ul class="desk-nav-list">
+                                <li>Overview</li>
+                                <li>Pricing</li>
+                                <li>Marketplace</li>
+                                <li>Features</li>
+                                <li>Integrations</li>
+                            </ul>
+                        </div>
+
+                        <div class="desktop-wrapper">
+                            <div class="desk-nav-name">
+                                <h3 id="desk-name">Connect</h3>
+                                <h3 id="desk-name2">Connect</h3>
+                                <ion-icon id="desk-down" name="chevron-down-outline"></ion-icon>
+                                <ion-icon id="desk-up" name="chevron-up-outline"></ion-icon>
+
+                            </div>
+                            <ul class="desk-nav-list">
+                                <li>About</li>
+                                <li>Team</li>
+                                <li>Blog</li>
+                                <li>Careers</li>
+                            </ul>
+                        </div>
+
+                        <div class="desktop-wrapper">
+                            <div class="desk-nav-name">
+                                <h3 id="desk-name">Product</h3>
+
+                                <ion-icon id="desk-down" name="chevron-down-outline"></ion-icon>
+                                <ion-icon id="desk-up" name="chevron-up-outline"></ion-icon>
+
+                            </div>
+                            <ul class="desk-nav-list">
+                                <li>Contact</li>
+                                <li>Newsletter</li>
+                                <li>LinkedIn</li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="menu-button-wrapper">
+                    <button aria-label="hamburger" id="open"><img src="./images/icon-hamburger.svg" alt=""
+                            aria-hidden="true"></button>
+                    <button aria-label="close" id="close"><img src="./images/icon-close.svg" alt=""
+                            aria-hidden="true"></button>
+                </div>
+
+                <div class="desk-account">
+                    <button id="desk-login">Login</button>
+                    <button id="desk-signup">Sign Up </button>
+                </div>
+
+
+            </div>
+
+            <div class="intro-wrapper">
+                <h1>A modern publishing platform</h1>
+                <p>Grow your audience and build your online brand</p>
+
+                <div class="intro-buttons">
+                    <button class="start">Start for Free</button>
+                    <button class="learn">Learn More</button>
+                </div>
+            </div>
+
+            <nav class="mobile-nav">
+                <div class="nav-wrapper">
+                    <div class="nav-name">
+                        <h3>Product</h3>
+                        <img id="down" src="./images/icon-arrow-light.svg" alt="" aria-hidden="true">
+                        <img id="up" src="./images/icon-arrow-dark.svg" alt="" aria-hidden="true">
+                    </div>
+                    <ul class="nav-list">
+                        <li>Overview</li>
+                        <li>Pricing</li>
+                        <li>Marketplace</li>
+                        <li>Features</li>
+                        <li>Integrations</li>
+                    </ul>
+                </div>
+
+
+                <div class="nav-wrapper">
+                    <div class="nav-name">
+                        <h3>Company</h3>
+                        <img id="down" src="./images/icon-arrow-light.svg" alt="" aria-hidden="true">
+                        <img id="up" src="./images/icon-arrow-dark.svg" alt="" aria-hidden="true">
+                    </div>
+                    <ul class="nav-list">
+                        <li>About</li>
+                        <li>Team</li>
+                        <li>Blog</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+
+                <div class="nav-wrapper">
+                    <div class="nav-name">
+                        <h3>Connect</h3>
+                        <img id="down" src="./images/icon-arrow-light.svg" alt="" aria-hidden="true">
+                        <img id="up" src="./images/icon-arrow-dark.svg" alt="" aria-hidden="true">
+                    </div>
+                    <ul class="nav-list">
+                        <li>Contact</li>
+                        <li>Newsletter</li>
+                        <li>LinkedIn</li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="account">
+                    <button id="login">Login</button>
+                    <button id="sign-up">Sign Up</button>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="first-section">
+            <h2>Design for the future</h2>
+
+
+            <div class="image">
+
+            </div>
+
+            <section class='details'>
+                <h2>Introducing an extensible editor</h2>
+                <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating
+                    content. The editor supports management of multiple blogs and allows easy maninipulation of embeds
+                    such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add
+                    functionality or change the looks of a blog.</p>
+            </section>
+
+            <section class='details'>
+                <h2>Robust content management</h2>
+                <p>Flexible content management enables users to easily move through posts. Increase the usability of
+                    your blog by adding customized categories, sections, formats, or flow. With this functionality,
+                    you're in full control.</p>
+            </section>
+        </section>
+
+
+        <section class="second-section">
+
+
+            <div class="details">
+
+                <div class="details-bg-image">
+                    <div class="second-img">
+                        <img src="./images/illustration-phones.svg" alt="" aria-hidden="true">
+                    </div>
+                    <div class="details-content">
+                        <h2>State of the Art Infrastructure</h2>
+                        <p>With reliability and speed in mind worldwide data centers provide the backbone for ultra-fast
+                            connectivity. This ensures your site will load instantly, no matter where your readers are,
+                            keeping
+                            your site competitive.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="third-section">
+            <div class="image2">
+
+            </div>
+
+            <section class='details'>
+                <h2>Free, open, simple</h2>
+                <p>Blogr is a free and open source application backed by a large community of helpful developers. It
+                    supports features such as code syntax highlighting. RSS feeds, social media integration, third-party
+                    commenting tools, adn works seamlessly with GOogle Analytics. The architecture is clean and is
+                    realtively easy to learn.</p>
+            </section>
+
+            <section class='details'>
+                <h2>Powerful tooling </h2>
+                <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and
+                    deployment a breeze. but capable of producing e ven the most complicated sites.</p>
+            </section>
+        </section>
+    </main>
+
+
+    <footer>
+        <img src="./images/logo.svg" alt="logo" aria-hidden="true">
+
+
+        <nav class="product-nav">
+            <h3>Product</h3>
+            <ul>
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Marketplace</li>
+                <li>Features</li>
+                <li>Integrations</li>
+            </ul>
+        </nav>
+
+        <nav class="company-nav">
+            <h3>Company</h3>
+            <ul>
+                <li>About</li>
+                <li>Team</li>
+                <li>Blog</li>
+                <li>Careers</li>
+            </ul>
+        </nav>
+
+        <nav class="connect-nav">
+            <h3>Connect</h3>
+            <ul>
+                <li>Contact</li>
+                <li>Newsletter</li>
+                <li>LinkedIn</li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,1010 @@
+header {
+  position: relative;
+  z-index: 2;
+  font-family: "Overpass", sans-serif;
+  color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  height: 32rem;
+  background: linear-gradient(to bottom, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  border-bottom-left-radius: 6rem;
+}
+@-webkit-keyframes animation1 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes animation1 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes animation2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animation2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+header .mobile-nav {
+  display: none;
+  flex-direction: column;
+  -webkit-animation: animation1 1s ease 0s normal none;
+          animation: animation1 1s ease 0s normal none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: black;
+  top: 20%;
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  background-color: hsl(0deg, 0%, 100%);
+}
+header .mobile-nav .nav-wrapper {
+  padding: 1rem;
+}
+header .mobile-nav .nav-wrapper h3 {
+  cursor: pointer;
+  color: hsl(208deg, 49%, 24%);
+}
+header .mobile-nav .nav-wrapper .nav-name {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+header .mobile-nav .nav-wrapper .nav-name:hover {
+  text-decoration: underline;
+}
+header .mobile-nav .nav-wrapper .nav-name #down {
+  cursor: pointer;
+}
+header .mobile-nav .nav-wrapper .nav-name #up {
+  cursor: pointer;
+  rotate: 180deg;
+  display: none;
+}
+header .mobile-nav .nav-wrapper ul {
+  -webkit-animation: animation2 0.3s ease-in;
+          animation: animation2 0.3s ease-in;
+  width: 100%;
+  margin-top: 1.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+  background-color: rgba(233, 233, 233, 0.95);
+}
+header .mobile-nav .nav-wrapper ul li {
+  cursor: pointer;
+  cursor: pointer;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: hsl(208deg, 49%, 24%);
+  font-family: "Overpass", sans-serif;
+}
+header .mobile-nav .nav-wrapper ul li:hover {
+  text-decoration: underline;
+}
+header .mobile-nav hr {
+  margin-top: 1rem;
+  opacity: 0.25;
+}
+header .mobile-nav .account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+header .mobile-nav .account button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem;
+}
+header .mobile-nav .account #login {
+  color: hsl(208deg, 49%, 24%);
+  background: none;
+}
+header .mobile-nav .account #sign-up {
+  color: #fff;
+  background: linear-gradient(to right, hsl(13deg, 100%, 72%), hsl(353deg, 100%, 62%));
+  width: 50%;
+  border-radius: 2rem;
+}
+header .header-wrapper {
+  border-bottom-left-radius: 6rem;
+  position: inherit;
+  z-index: 2;
+  padding: 2rem 1rem;
+  background-image: url(../images/bg-pattern-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 280%;
+  background-position: -13.5rem -12rem;
+  height: 100%;
+}
+header .header-wrapper .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header .header-wrapper .top .logo-wrapper {
+  gap: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper .desk-nav-name {
+  gap: 0.5rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper .desk-nav-name:hover {
+  text-decoration: underline;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper .desk-nav-name img {
+  width: 1rem;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper .desk-nav-name #desk-up {
+  display: none;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper .desk-nav-name #desk-name2 {
+  display: none;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper ul {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  margin-left: 3rem;
+  padding: 2rem 1.5rem;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #000;
+  top: 6rem;
+  position: absolute;
+  width: 12rem;
+  height: 10rem;
+  background: #fff;
+  list-style: none;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0.5px;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper ul li {
+  cursor: pointer;
+}
+header .header-wrapper .top .logo-wrapper .desktop-nav .desktop-wrapper ul li:hover {
+  font-weight: 700;
+}
+header .header-wrapper .top .logo-wrapper img {
+  width: 65%;
+}
+header .header-wrapper .top .menu-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-wrapper .top .menu-button-wrapper img {
+  width: 1rem;
+  height: 1rem;
+}
+header .header-wrapper .top .menu-button-wrapper button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+header .header-wrapper .top .menu-button-wrapper #close {
+  display: none;
+}
+header .header-wrapper .top .desk-account {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header .header-wrapper .top .desk-account button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+}
+header .header-wrapper .top .desk-account #desk-login {
+  color: white;
+  background: none;
+}
+header .header-wrapper .top .desk-account #desk-signup {
+  color: hsl(353deg, 100%, 62%);
+}
+header .header-wrapper .top .desk-account #desk-signup:hover {
+  color: white;
+  background-color: hsl(355deg, 100%, 74%);
+}
+header .header-wrapper .intro-wrapper {
+  padding: 2rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+}
+header .header-wrapper .intro-wrapper h1 {
+  font-size: 2rem;
+}
+header .header-wrapper .intro-wrapper p {
+  color: hsl(240deg, 2%, 79%);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+header .header-wrapper .intro-wrapper .intro-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header .header-wrapper .intro-wrapper .intro-buttons button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.8rem;
+  border-radius: 5rem;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+header .header-wrapper .intro-wrapper .intro-buttons .start {
+  color: hsl(356deg, 100%, 66%);
+}
+header .header-wrapper .intro-wrapper .intro-buttons .start:hover {
+  background-color: hsl(355deg, 100%, 74%);
+  color: hsl(0deg, 0%, 100%);
+}
+header .header-wrapper .intro-wrapper .intro-buttons .learn {
+  color: white;
+  background: none;
+  border: 1px solid white;
+}
+header .header-wrapper .intro-wrapper .intro-buttons .learn:hover {
+  background-color: white;
+  color: hsl(356deg, 100%, 66%);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    border-bottom-left-radius: 6rem;
+    position: relative;
+    z-index: 2;
+    font-family: "Overpass", sans-serif;
+    color: hsl(0deg, 0%, 100%);
+    width: 100%;
+    height: 28rem;
+  }
+  header .header-wrapper {
+    padding: 3rem 4rem;
+    background-image: url(../images/bg-pattern-intro-mobile.svg);
+    background-size: 150%;
+    background-position: center;
+  }
+  header .header-wrapper .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .header-wrapper .intro-wrapper {
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  header .header-wrapper .intro-wrapper h1 {
+    font-size: 2.5rem;
+  }
+  header .header-wrapper .intro-wrapper p {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    height: 28rem;
+  }
+  header .header-wrapper {
+    padding: 3rem 5rem;
+    background-image: url(../images/bg-pattern-intro-mobile.svg);
+    background-size: 150%;
+    background-position: center;
+  }
+  header .header-wrapper .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .header-wrapper .top .logo-wrapper img {
+    width: 5rem;
+  }
+  header .header-wrapper .top .logo-wrapper .desktop-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-wrapper .top .menu-button-wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-wrapper .top .desk-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-wrapper .intro-wrapper {
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  header .header-wrapper .intro-wrapper h1 {
+    font-size: 2.5rem;
+  }
+  header .header-wrapper .intro-wrapper p {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header {
+    height: 33rem;
+  }
+  header .header-wrapper {
+    padding: 3rem 7rem;
+    background-image: url(../images/bg-pattern-intro-mobile.svg);
+    background-size: 150%;
+    background-position: center;
+  }
+  header .header-wrapper .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .header-wrapper .top .logo-wrapper img {
+    width: 5rem;
+  }
+  header .header-wrapper .top .logo-wrapper .desktop-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-wrapper .top .menu-button-wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-wrapper .top .desk-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main {
+  margin-top: 8rem;
+  width: 100%;
+  height: 100%;
+  font-family: "Overpass", sans-serif;
+  text-align: center;
+}
+main img {
+  width: 100%;
+}
+main h2 {
+  font-size: 1.75rem;
+  color: hsl(208deg, 49%, 24%);
+}
+main p {
+  line-height: 1.5rem;
+  color: hsl(207deg, 13%, 34%);
+}
+main .details {
+  padding: 2rem;
+}
+main .details h2 {
+  margin-bottom: 1rem;
+}
+main .first-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+main .first-section .image {
+  width: 85%;
+  height: 18rem;
+  background-image: url(../images/illustration-editor-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+main .second-section {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .second-section .details {
+  padding: 0;
+  border-top-right-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  background: linear-gradient(to bottom, hsl(237deg, 17%, 21%), hsl(237deg, 23%, 32%));
+}
+main .second-section .details .details-bg-image {
+  border-top-right-radius: 5rem;
+  padding: 15rem 2rem 5rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: -3rem -10rem;
+}
+main .second-section .details .details-bg-image .second-img {
+  margin-top: -23rem;
+}
+main .second-section .details h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: white;
+}
+main .second-section .details p {
+  letter-spacing: 0.5px;
+  color: hsl(240deg, 2%, 79%);
+}
+main .third-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .third-section .image2 {
+  background-image: url("../images/illustration-laptop-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 25rem;
+  background-position: center;
+  width: 85%;
+  height: 20rem;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    margin-top: 8rem;
+    width: 100%;
+    height: 100%;
+    font-family: "Overpass", sans-serif;
+    text-align: center;
+  }
+  main img {
+    width: 80%;
+  }
+  main h2 {
+    font-size: 1.75rem;
+    color: hsl(208deg, 49%, 24%);
+  }
+  main p {
+    line-height: 1.5rem;
+    color: hsl(207deg, 13%, 34%);
+  }
+  main .details {
+    padding: 2rem 5rem;
+  }
+  main .details h2 {
+    margin-bottom: 1rem;
+  }
+  main .first-section {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  main .second-section {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  main .second-section .details {
+    padding: 0;
+  }
+  main .second-section .details .details-bg-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: -3rem -8rem;
+    padding: 4rem 2rem;
+  }
+  main .second-section .details .details-bg-image .second-img img {
+    width: 20rem;
+    position: absolute;
+  }
+  main .second-section .details .details-bg-image .details-content {
+    padding-left: 20rem;
+  }
+  main .second-section .details .details-bg-image .details-content h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    margin-top: 8rem;
+    width: 100%;
+    height: 100%;
+    font-family: "Overpass", sans-serif;
+    text-align: center;
+  }
+  main img {
+    width: 100%;
+  }
+  main h2 {
+    font-size: 1.75rem;
+    color: hsl(208deg, 49%, 24%);
+  }
+  main p {
+    line-height: 1.5rem;
+    color: hsl(207deg, 13%, 34%);
+  }
+  main .details {
+    padding: 2rem 5rem;
+  }
+  main .details h2 {
+    margin-bottom: 1rem;
+  }
+  main .first-section {
+    z-index: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    flex-direction: column;
+    padding: 2rem 0 2rem 3rem;
+  }
+  main .first-section .details {
+    padding: 0 2rem;
+  }
+  main .first-section .details h2,
+main .first-section .details p {
+    text-align: left;
+  }
+  main .first-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    grid-column: 1/3;
+  }
+  main .first-section .image {
+    background-image: url(../images/illustration-editor-desktop.svg);
+    background-size: 40rem;
+    background-position: 3rem;
+    height: 100%;
+    padding: 0;
+    grid-row: 2/5;
+    grid-column: 2;
+    width: 100%;
+  }
+  main .first-section p {
+    font-size: 0.9rem;
+  }
+  main .second-section {
+    width: 100%;
+    margin-top: 8rem;
+  }
+  main .second-section .details {
+    text-align: left;
+    padding: 0;
+  }
+  main .second-section .details .details-bg-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: -10rem -23rem;
+    padding: 5rem 2rem;
+  }
+  main .second-section .details .details-bg-image .second-img img {
+    margin-left: 2rem;
+    width: 23rem;
+    position: absolute;
+  }
+  main .second-section .details .details-bg-image .details-content {
+    padding-left: 28rem;
+  }
+  main .second-section .details .details-bg-image .details-content h2 {
+    font-size: 1.5rem;
+  }
+  main .third-section {
+    margin-top: 5rem;
+    z-index: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  main .third-section .details {
+    margin-left: -8rem;
+    text-align: left;
+  }
+  main .third-section .details h2 {
+    font-size: 1.5rem;
+  }
+  main .third-section .details p {
+    font-size: 0.9rem;
+  }
+  main .third-section .image2 {
+    background-image: url(../images/illustration-laptop-desktop.svg);
+    background-size: 40rem;
+    grid-column: 1;
+    grid-row: 1/3;
+    background-position: -12rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main {
+    margin-top: 8rem;
+    width: 100%;
+    height: 100%;
+    font-family: "Overpass", sans-serif;
+    text-align: center;
+  }
+  main .first-section {
+    background-image: url(../images/illustration-editor-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 55rem 50rem;
+    background-position: 50rem 1rem;
+    padding: 5rem 0 2rem;
+  }
+  main .first-section .details {
+    padding-left: 8rem;
+  }
+  main .first-section .details h2,
+main .first-section .details p {
+    text-align: left;
+  }
+  main .first-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    grid-column: 1/3;
+  }
+  main .first-section p {
+    letter-spacing: 0.5px;
+    line-height: 2rem;
+    font-size: 1.1rem;
+  }
+  main .first-section .image {
+    background-image: unset;
+    background-size: 45rem 41rem;
+    background-position: 7.5rem;
+    height: 150%;
+    grid-row: 2/4;
+  }
+  main .second-section {
+    width: 100vw;
+    margin-top: 10rem;
+  }
+  main .second-section .details {
+    text-align: left;
+    padding: 0;
+  }
+  main .second-section .details .details-bg-image {
+    background-position: -5rem -23rem;
+    padding: 7rem 5rem;
+  }
+  main .second-section .details .details-bg-image .second-img img {
+    margin-top: -3rem;
+    margin-left: 5rem;
+    width: 30rem;
+  }
+  main .second-section .details .details-bg-image .details-content {
+    padding-left: 40rem;
+  }
+  main .second-section .details .details-bg-image .details-content h2 {
+    font-size: 2rem;
+  }
+  main .second-section .details .details-bg-image .details-content p {
+    line-height: 1.7rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+  main .third-section {
+    background-image: url(../images/illustration-laptop-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 55rem 45rem;
+    background-position: -17rem 5rem;
+    padding: 10rem 3rem;
+    margin-top: 5rem;
+  }
+  main .third-section .details {
+    margin-left: -8rem;
+    text-align: left;
+  }
+  main .third-section .details h2 {
+    font-size: 2rem;
+  }
+  main .third-section .details p {
+    letter-spacing: 0.5px;
+    line-height: 2rem;
+    font-size: 1.1rem;
+  }
+  main .third-section .image2 {
+    background-image: unset;
+  }
+}
+@media screen and (min-width: 1500px) and (max-width: 2560px) {
+  main {
+    margin-top: 5rem;
+  }
+  main .first-section {
+    background-size: 55rem 50rem;
+    background-position: right 10rem;
+    padding: 10rem 15rem;
+  }
+  main .first-section .details {
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+  main .first-section .details h2,
+main .first-section .details p {
+    text-align: left;
+  }
+  main .first-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    grid-column: 1/3;
+  }
+  main .first-section p {
+    letter-spacing: 0.5px;
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+  main .first-section .image {
+    background-image: unset;
+    background-size: 45rem 41rem;
+    background-position: 7.5rem;
+    height: 150%;
+    grid-row: 2/4;
+  }
+  main .second-section {
+    width: 100vw;
+    margin-top: 10rem;
+  }
+  main .second-section .details {
+    text-align: left;
+    padding: 0;
+  }
+  main .second-section .details .details-bg-image {
+    background-position: -5rem -23rem;
+    padding: 7rem 5rem;
+  }
+  main .second-section .details .details-bg-image .second-img img {
+    margin-top: -3rem;
+    margin-left: 5rem;
+    width: 30rem;
+  }
+  main .second-section .details .details-bg-image .details-content {
+    padding-left: 40rem;
+  }
+  main .second-section .details .details-bg-image .details-content h2 {
+    font-size: 2rem;
+  }
+  main .second-section .details .details-bg-image .details-content p {
+    line-height: 1.7rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+  main .third-section {
+    background-size: 55rem 45rem;
+    background-position: left 5rem;
+    padding: 10rem 15rem;
+    margin-top: 8rem;
+  }
+  main .third-section .details {
+    margin-left: -8rem;
+  }
+  main .third-section .details h2 {
+    font-size: 2.5rem;
+  }
+  main .third-section .details p {
+    letter-spacing: 0.5px;
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
+}
+footer {
+  margin-top: 3rem;
+  border-top-right-radius: 7rem;
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(240deg, 10%, 16%);
+  padding: 5rem;
+  text-align: center;
+}
+footer img {
+  margin-bottom: 2rem;
+}
+footer h3 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+footer nav ul li {
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  color: hsl(240deg, 2%, 79%);
+}
+footer nav ul li:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 5rem;
+    text-align: left;
+  }
+  footer img {
+    margin-bottom: 2rem;
+  }
+  footer h3 {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  footer nav ul li {
+    letter-spacing: 1px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-top: 5rem;
+    flex-direction: row;
+    padding: 7rem 15rem 5rem 10rem;
+    text-align: left;
+  }
+  footer img {
+    margin-bottom: 2rem;
+  }
+  footer h3 {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  footer nav ul li {
+    letter-spacing: 1px;
+  }
+}
+@media screen and (min-width: 1500px) and (max-width: 2560px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 5rem;
+    flex-direction: row;
+    padding: 7rem 15rem 5rem 15rem;
+    text-align: left;
+  }
+  footer img {
+    margin-bottom: 2rem;
+  }
+  footer h3 {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  footer nav ul li {
+    letter-spacing: 1px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=styles.css.map */

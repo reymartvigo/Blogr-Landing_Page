@@ -1,0 +1,432 @@
+@use "variable";
+
+header {
+  position: relative;
+  z-index: 2;
+  font-family: variable.$font1;
+  color: variable.$White;
+  width: 100%;
+  height: 32rem;
+  background: linear-gradient(
+    to bottom,
+    variable.$Verylightred2,
+    variable.$Lightred2
+  );
+  border-bottom-left-radius: 6rem;
+
+  @keyframes animation1 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes animation2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    animation: animation1 1s ease 0s normal none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    top: 20%;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    background-color: variable.$White;
+
+    .nav-wrapper {
+      padding: 1rem;
+      h3 {
+        cursor: pointer;
+        color: variable.$Verydarkblue;
+      }
+      .nav-name {
+        font-family: variable.$font2;
+        font-weight: 700;
+        @include variable.display;
+        gap: 0.5rem;
+        &:hover {
+          text-decoration: underline;
+        }
+
+        #down {
+          cursor: pointer;
+        }
+
+        #up {
+          cursor: pointer;
+          rotate: 180deg;
+          display: none;
+        }
+      }
+
+      ul {
+        animation: animation2 0.3s ease-in;
+        width: 100%;
+        margin-top: 1.5rem;
+        @include variable.display($display: none);
+        border-radius: 0.5rem;
+        padding: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        list-style: none;
+        background-color: rgba(233, 233, 233, 0.95);
+
+        li {
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+          cursor: pointer;
+          font-size: 1.15rem;
+          letter-spacing: 0.5px;
+          font-weight: 700;
+          color: variable.$Verydarkblue;
+          font-family: variable.$font1;
+        }
+      }
+    }
+    hr {
+      margin-top: 1rem;
+      opacity: 0.25;
+    }
+    .account {
+      @include variable.display;
+      flex-direction: column;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      gap: 0.5rem;
+      button {
+        @include variable.buttons;
+        font-family: variable.$font1;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 1rem;
+      }
+
+      #login {
+        color: variable.$Verydarkblue;
+        background: none;
+      }
+
+      #sign-up {
+        color: #fff;
+        background: linear-gradient(
+          to right,
+          variable.$Verylightred2,
+          variable.$Lightred2
+        );
+        width: 50%;
+        border-radius: 2rem;
+      }
+    }
+  }
+
+  .header-wrapper {
+    border-bottom-left-radius: 6rem;
+    position: inherit;
+    z-index: 2;
+    padding: 2rem 1rem;
+    background-image: url(../images/bg-pattern-intro-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 280%;
+    background-position: -13.5rem -12rem;
+    height: 100%;
+
+    .top {
+      @include variable.display($justify: space-between);
+      width: 100%;
+
+      .logo-wrapper {
+        gap: 2.5rem;
+        @include variable.display;
+
+        .desktop-nav {
+          @include variable.display($display: none);
+
+          .desktop-wrapper {
+            @include variable.display;
+            flex-direction: column;
+            gap: 2rem;
+
+            .desk-nav-name {
+              gap: 0.5rem;
+              padding-right: 1rem;
+              cursor: pointer;
+              @include variable.display;
+              &:hover {
+                text-decoration: underline;
+              }
+              img {
+                width: 1rem;
+              }
+
+              #desk-up {
+                display: none;
+              }
+
+              #desk-name2 {
+                display: none;
+              }
+            }
+
+            ul {
+              -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+              box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+              border-radius: 0.5rem;
+              margin-left: 3rem;
+              padding: 2rem 1.5rem;
+              display: none;
+              justify-content: center;
+              flex-direction: column;
+              gap: 0.5rem;
+              color: #000;
+              top: 6rem;
+              position: absolute;
+              width: 12rem;
+              height: 10rem;
+              background: #fff;
+              list-style: none;
+              font-family: variable.$font2;
+              letter-spacing: 0.5px;
+              li {
+                cursor: pointer;
+                &:hover {
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+        img {
+          width: 65%;
+        }
+      }
+
+      .menu-button-wrapper {
+        @include variable.display;
+
+        img {
+          width: 1rem;
+          height: 1rem;
+        }
+
+        button {
+          background: none;
+          @include variable.buttons;
+        }
+
+        #close {
+          display: none;
+        }
+      }
+
+      .desk-account {
+        @include variable.display($display: none);
+        gap: 1rem;
+        button {
+          @include variable.buttons;
+          padding: 0.5rem 1.5rem;
+          border-radius: 5rem;
+          font-family: variable.$font1;
+          font-weight: 700;
+        }
+        #desk-login {
+          color: white;
+          background: none;
+        }
+        #desk-signup {
+          color: variable.$Lightred2;
+          &:hover {
+            color: white;
+            background-color: variable.$Verylightred;
+          }
+        }
+      }
+    }
+
+    .intro-wrapper {
+      padding: 2rem 1.5rem;
+      @include variable.display;
+      gap: 1rem;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 3rem;
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        color: variable.$Grayishblue;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+      }
+
+      .intro-buttons {
+        width: 100%;
+        @include variable.display;
+        gap: 1rem;
+
+        button {
+          @include variable.buttons;
+          font-family: variable.$font2;
+          font-size: 0.8rem;
+          border-radius: 5rem;
+          text-align: center;
+          padding: 0.8rem 1rem;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+
+        .start {
+          color: variable.$Lightred;
+          &:hover {
+            background-color: variable.$Verylightred;
+            color: variable.$White;
+          }
+        }
+
+        .learn {
+          color: white;
+          background: none;
+          border: 1px solid white;
+          &:hover {
+            background-color: white;
+            color: variable.$Lightred;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    border-bottom-left-radius: 6rem;
+    position: relative;
+    z-index: 2;
+    font-family: variable.$font1;
+    color: variable.$White;
+    width: 100%;
+    height: 28rem;
+
+    .header-wrapper {
+      padding: 3rem 4rem;
+      background-image: url(../images/bg-pattern-intro-mobile.svg);
+      background-size: 150%;
+      background-position: center;
+
+      .top {
+        @include variable.display($justify: space-between);
+      }
+
+      .intro-wrapper {
+        padding: 2rem 1.5rem;
+        @include variable.display;
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3rem;
+        h1 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    height: 28rem;
+    .header-wrapper {
+      padding: 3rem 5rem;
+      background-image: url(../images/bg-pattern-intro-mobile.svg);
+      background-size: 150%;
+      background-position: center;
+
+      .top {
+        @include variable.display($justify: space-between);
+
+        .logo-wrapper {
+          img {
+            width: 5rem;
+          }
+
+          .desktop-nav {
+            @include variable.display($display: flex);
+          }
+        }
+        .menu-button-wrapper {
+          @include variable.display($display: none);
+        }
+
+        .desk-account {
+          @include variable.display($display: flex);
+        }
+      }
+
+      .intro-wrapper {
+        padding: 2rem 1.5rem;
+        @include variable.display;
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3rem;
+        h1 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    height: 33rem;
+    .header-wrapper {
+      padding: 3rem 7rem;
+      background-image: url(../images/bg-pattern-intro-mobile.svg);
+      background-size: 150%;
+      background-position: center;
+
+      .top {
+        @include variable.display($justify: space-between);
+
+        .logo-wrapper {
+          img {
+            width: 5rem;
+          }
+
+          .desktop-nav {
+            @include variable.display($display: flex);
+          }
+        }
+        .menu-button-wrapper {
+          @include variable.display($display: none);
+        }
+
+        .desk-account {
+          @include variable.display($display: flex);
+        }
+      }
+    }
+  }
+}
